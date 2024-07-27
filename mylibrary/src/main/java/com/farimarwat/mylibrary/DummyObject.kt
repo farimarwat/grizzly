@@ -1,4 +1,4 @@
-package com.example.basicapplication
+package com.farimarwat.mylibrary
 
 object DummyObject {
     lateinit var data:String
