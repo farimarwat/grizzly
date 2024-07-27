@@ -8,4 +8,8 @@ object DummyObject {
         }
         data = "initialized"
     }
+
+    fun createCrash(){
+        throw Exception("Testing")
+    }
 }
