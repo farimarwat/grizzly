@@ -48,5 +48,5 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
-    implementation("io.github.farimarwat:grizzly:2.0")
+    implementation("io.github.farimarwat:grizzly:2.1")
 }
