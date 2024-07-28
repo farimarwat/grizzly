@@ -1,3 +1,5 @@
+
+<img src="grizzly.webp" width="50%" height="50%"/>
 GrizzlyMonitor is an advanced library designed to handle ANRs (Application Not Responding) and crashes that occur due to third-party integrations, which are beyond your control. This library ensures that these exceptions are managed efficiently and prevents them from being reported to the Google Play Console. With minimal configuration, GrizzlyMonitor provides robust monitoring and handling of ANRs and crashes, making your applications more resilient and stable.
 
 ### Key Features:
