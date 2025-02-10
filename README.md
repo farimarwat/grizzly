@@ -12,7 +12,7 @@ GrizzlyMonitor is an advanced library designed to handle ANRs (Application Not R
 ### Add Dependencies:
 Add the GrizzlyMonitor dependency to your build.gradle file
 ```
-implementation("io.github.farimarwat:grizzly:2.2")
+implementation("io.github.farimarwat:grizzly:2.3")
 
 ```
 
@@ -63,6 +63,7 @@ class App : Application() {
             .withTitle("App Error") // Set custom crash dialog title
             .withMessage("An error occurred. Please restart.") // Set custom crash dialog message
             .withFirebaseCrashLytics(firebaseCrashlytics) // Integrate with Firebase Crashlytics
+            ..withNormalCrashEnabled(true) // Only enable if you want to get the exact line of ANR in form of crash. Default is false
             .build()
             .start()
     }
