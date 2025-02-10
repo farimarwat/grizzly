@@ -63,7 +63,7 @@ class App : Application() {
             .withTitle("App Error") // Set custom crash dialog title
             .withMessage("An error occurred. Please restart.") // Set custom crash dialog message
             .withFirebaseCrashLytics(firebaseCrashlytics) // Integrate with Firebase Crashlytics
-            ..withNormalCrashEnabled(true) // Only enable if you want to get the exact line of ANR in form of crash. Default is false
+            .withNormalCrashEnabled(true) // Only enable if you want to get the exact line of ANR in form of crash. Default is false
             .build()
             .start()
     }
