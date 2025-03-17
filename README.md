@@ -12,7 +12,7 @@ GrizzlyMonitor is an advanced library designed to handle ANRs (Application Not R
 ### Add Dependencies:
 Add the GrizzlyMonitor dependency to your build.gradle file
 ```
-implementation("io.github.farimarwat:grizzly:2.3")
+implementation("io.github.farimarwat:grizzly:2.4.2")
 
 ```
 
@@ -23,7 +23,7 @@ For the minimum setup, simply build and start the GrizzlyMonitor with the defaul
 #### Initialize GrizzlyMonitor:
 In your application class, initialize and start the GrizzlyMonitor.
 
-```
+```kotlin
 import android.app.Application
 import com.farimarwat.grizzly.GrizzlyMonitorBuilder
 
@@ -44,7 +44,7 @@ This minimal setup is sufficient to start monitoring ANRs and crashes with the d
 ### Full Setup with Custom Configuration
 To utilize all the customizable options available in GrizzlyMonitor, follow the steps below.
 
-```
+```kotlin
 import android.app.Application
 import com.farimarwat.grizzly.GrizzlyMonitorBuilder
 import com.google.firebase.crashlytics.FirebaseCrashlytics
@@ -58,15 +58,20 @@ class App : Application() {
 
         // Initialize and start GrizzlyMonitor with custom settings
         GrizzlyMonitorBuilder(this)
-            .withTicker(200L) // Set ticker interval (1-500ms)
             .withThreshold(3000L) // Set ANR threshold (1000-4500ms)
             .withTitle("App Error") // Set custom crash dialog title
             .withMessage("An error occurred. Please restart.") // Set custom crash dialog message
             .withFirebaseCrashLytics(firebaseCrashlytics) // Integrate with Firebase Crashlytics
-            .withNormalCrashEnabled(true) // Only enable if you want to get the exact line of ANR in form of crash. Default is false
             .build()
             .start()
     }
 }
 
 ```
+
+### Version History
+**2.4.2**
+- Removed methods:
+  - withTicker
+  - withNormalCrashEnabled
+- Performance Improved
