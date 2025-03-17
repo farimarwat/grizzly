@@ -11,7 +11,7 @@ GrizzlyMonitor is an advanced library designed to handle ANRs (Application Not R
 
 ### Add Dependencies:
 Add the GrizzlyMonitor dependency to your build.gradle file
-```
+```kotlin
 implementation("io.github.farimarwat:grizzly:2.4.2")
 
 ```
